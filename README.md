@@ -1,0 +1,4 @@
+jsTalks
+=======
+
+JavaScript inernationalization tool.
