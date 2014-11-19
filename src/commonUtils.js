@@ -1,4 +1,33 @@
-﻿
+// Ensure that window.console.* functions exist.
+// This is needed for IE8.
+// IE8 does not create the window.console object
+// until the developer console is open.
+if (typeof window.console === 'undefined')
+{
+	window.console = new Object();
+}
+if (typeof window.console.log === 'undefined')
+{
+	window.console.log = function() {};
+}
+if (typeof window.console.error === 'undefined')
+{
+	window.console.error = function() {};
+}
+if (typeof window.console.warn === 'undefined')
+{
+	window.console.warn = function() {};
+}
+if (typeof window.console.info === 'undefined')
+{
+	window.console.info = function() {};
+}
+if (typeof window.console.debug === 'undefined')
+{
+	window.console.debug = function() {};
+}
+
+
 /**
  * This will store the language code override that should be
  * used, regardless of the users browser configuration.
